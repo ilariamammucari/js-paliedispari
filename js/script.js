@@ -12,6 +12,12 @@ var numero = parseInt(prompt('Inserisci un numero da 1 a 5'));
 var computer = numeroRandom(1,5);
 
 
+// se l'utente inserisce un numero che non è tra 1 e 5 allora richiedi di nuovo l'inserimento del numero
+if ((numero > 5) || (numero <= 0)){
+  pariODispari = prompt('Hai sbagliato. Inserisci un numero da 1 a 5');
+}
+
+
 // faccio la somma del numero inserito e del numero random generato
 var sommaNumeri = somma(numero, computer);
 console.log(sommaNumeri);

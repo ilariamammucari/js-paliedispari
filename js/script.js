@@ -11,16 +11,21 @@ var pariODispari = prompt('Pari o dispari?').toLowerCase();
 var numero = parseInt(prompt('Inserisci un numero da 1 a 5'));
 var computer = numeroRandom(1,5);
 
+
+
+
 // controllo che la parola sia scritta bene
-if ((pariODispari != 'pari') || (pariODispari != 'dispari')){
-  pariODispari = prompt('Attento a come scrivi la parolina. Pari o dispari?').toLowerCase();
-}
+// if ((pariODispari != 'pari') || (pariODispari != 'dispari')){
+//   pariODispari = prompt('Attento a come scrivi la parolina. Pari o dispari?').toLowerCase();
+// }
+do {
+  pariODispari = prompt('Pari o dispari?').toLowerCase();
+} while((pariODispari != 'pari') && (pariODispari != 'dispari'));
 
 // se l'utente inserisce un numero che non è tra 1 e 5 allora richiedi di nuovo l'inserimento del numero
-if ((numero > 5) || (numero <= 0)){
-  numero = prompt('Hai sbagliato. Inserisci un numero da 1 a 5');
-}
-
+// if ((numero > 5) || (numero <= 0)){
+//   numero = prompt('Hai sbagliato. Inserisci un numero da 1 a 5');
+// }
 
 // faccio la somma del numero inserito e del numero random generato
 var sommaNumeri = somma(numero, computer);
